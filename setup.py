@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+with open('requirements.txt') as f:
+    depends = map(str.strip, f.readlines())
+
 setup(name='pocket-change',
       version='0.0.6',
       author='Silas Ray',
@@ -18,14 +21,5 @@ setup(name='pocket-change',
                           'pocket_change/static/*.css',
                           'pocket_change/ui/templates/*.html']},
       include_package_data=True,
-      install_requires=['sneeze-pocket',
-                        'Flask',
-                        'Flask-RESTful',
-                        'Flask-SQLAlchemy',
-                        'Flask-OAuth',
-                        'passlib',
-                        'flask-login',
-                        'py-bcrypt',
-                        'gunicorn',
-                        'MySQL-python',
-                        ])
+      install_requires=depends
+      )

@@ -22,6 +22,10 @@ setup(name='pocket-change',
                         'Flask',
                         'Flask-RESTful',
                         'Flask-SQLAlchemy',
+                        'Flask-OAuth',
                         'passlib',
                         'flask-login',
-                        'py-bcrypt'])
+                        'py-bcrypt',
+                        'gunicorn',
+                        'MySQL-python',
+                        ])

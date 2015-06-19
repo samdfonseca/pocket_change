@@ -3,4 +3,4 @@
 DIR="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
 export POCKET_CHANGE_CONFIG="$DIR/pocket_change_config.py"
 
-gunicorn -w 4 --bind=127.0.0.1:5000 pocket_change.wsgi:app --chdir ~/dev/git/pocket_change
+gunicorn -w 4 --bind=127.0.0.1:5000 pocket_change.wsgi:app --chdir ~/dev/git/pocket_change --reload
